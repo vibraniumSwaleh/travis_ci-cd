@@ -27,6 +27,15 @@ script:
 # After success
 # After success
 # After success
+# After success
+# After success
+# After success
+# After success
+# After success
+# After success
+# After success
+# After success
+# After success
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push kimoyobeads/travis_ci_cd_dh

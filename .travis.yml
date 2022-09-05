@@ -21,4 +21,6 @@ script:
 # After success
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - export "$FAVORITE_FOOD"
+  - export "$FAVORITE_FOOD"
   - docker push kimoyobeads/travis_ci_cd_dh

@@ -16,11 +16,11 @@ before_script:
 script:
   - docker --version # print the version for logging
   - docker build -t simple-node .
-  - docker tag simple-node kimoyobeads/simple-node:latest
+  - docker tag simple-node kimoyobeads/travis_ci_cd_dh:latest
 
 # After success
 # After success
 # After success
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push kimoyobeads/simple-node
+  - docker push kimoyobeads/travis_ci_cd_dh

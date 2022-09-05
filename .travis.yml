@@ -19,6 +19,8 @@ script:
   - docker tag simple-node kimoyobeads/simple-node:latest
 
 # After success
+# After success
+# After success
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push kimoyobeads/simple-node
